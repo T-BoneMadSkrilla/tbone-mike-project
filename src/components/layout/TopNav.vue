@@ -1,20 +1,15 @@
 <template>
     <div>
         <div class="topRelative">
-            <div class="forEmployers">
-                Employers
-            </div>
-            <div class="forUni">
-                Universities
-            </div>
-            <div class="profile">
-                Profile
-            </div>
+            <router-link to="/employers" class="forEmployers"> Employers </router-link>
+
+            <router-link to="/universities" class="forUni"> Universities </router-link>
+            <router-link to="/profile" class="profile"> Profile </router-link>
         </div>
         <div class="logo">
             Our Logo
         </div>
-        <header class='header'>
+        <header class="header nav">
             | <router-link to="/"> Job Matches </router-link> |
             <router-link to="/resume"> Resume </router-link> |
         </header>
@@ -28,31 +23,38 @@
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 
     .topRelative{
         position: relative;
     }
 
+    .topRelative a{
+        text-decoration: none;
+    }
+
     .forEmployers{
         position: absolute;
         left: 15px;
+        color: #2c3e50;
     }
 
     .forUni{
         position: absolute;
         top: 20px;
         left: 15px;
+        color: #2c3e50;
     }
 
     .profile{
         position: absolute;
         right: 15px;
+        color: #2c3e50;
     }
 
     .logo{
         font-size: 2.5em;
-        font-family: 'Anton', sans-serif;
+        font-family: sans-serif;
         color: #41B883;
         -webkit-text-stroke: .5px #34495E;
     }
@@ -65,7 +67,11 @@
     }
 
     .header a {
-        color: #41B883;
+        color: white;
         text-decoration: none;
+    }
+
+    .header a.router-link-exact-active{
+        color: #42b983;
     }
 </style>

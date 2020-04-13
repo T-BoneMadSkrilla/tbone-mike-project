@@ -1,20 +1,18 @@
 <template>
   <div>
-    <div id="nav">
       <TopNav />
-    </div>
-    <HelloWorld msg="Jobs:" />
+    <Jobs msg="Jobs:" />
   </div>
 </template>
 
 <script>
-import HelloWorld from "@/components/HelloWorld.vue";
+import Jobs from "@/components/Jobs.vue";
 import TopNav from "@/components/layout/TopNav";
 
 export default {
   name: "JobMatches",
   components: {
-    HelloWorld,
+    Jobs,
     TopNav
   }
 };

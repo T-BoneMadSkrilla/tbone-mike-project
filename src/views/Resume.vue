@@ -1,9 +1,8 @@
 <template>
   <div>
-    <div id="nav">
-      <TopNav />
-    </div>
+    <TopNav />
     <h3>Please upload your resume</h3>
+    <p> Ight buddy, I was thinking of using firebase to host resumes. Thoughts?</p>
   </div>
 </template>
 

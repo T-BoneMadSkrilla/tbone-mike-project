@@ -7,7 +7,7 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "jobMatches",
+    name: "JobMatches",
     component: JobMatches
   },
   {
@@ -15,6 +15,24 @@ const routes = [
     name: "Resume",
     component: () =>
       import("../views/Resume.vue")
+  },
+  {
+    path: "/profile",
+    name: "Profile",
+    component: () => 
+      import("../views/Profile.vue")
+  },
+  {
+    path: "/employers",
+    name: "Employers",
+    component: () => 
+      import("../views/Employers.vue")
+  },
+  {
+    path: "/universities",
+    name: "Universities",
+    component: () => 
+      import("../views/Universities.vue")
   }
 ];
 
