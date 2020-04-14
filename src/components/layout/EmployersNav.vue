@@ -1,6 +1,6 @@
 <template>
     <header>
-        | <router-link to="/employers"> Candidates </router-link>
+        | <router-link to="/employers/candidates"> Candidates </router-link>
         | <router-link to="/employers/job-post"> Post a job </router-link> |
     </header>
 </template>

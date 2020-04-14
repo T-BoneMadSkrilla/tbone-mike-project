@@ -23,23 +23,27 @@ const routes = [
       import("../views/Profile.vue")
   },
   {
-    path: "/employers",
-    name: "Employers",
-    component: () => 
-      import("../views/Employers.vue")
-  },
-  {
     path: "/universities",
     name: "Universities",
     component: () => 
       import("../views/Universities.vue")
   },
   {
-    path: "employers/job-post",
-    name: "NewJob",
-    component: () => {
-      import("../components/NewJob.vue")
+    path: "/employers",
+    name: "Employers",
+    component: () => import("../views/Employers.vue"),
+    children: [
+      {
+      path: "/job-post",
+      component: () => 
+        import("../components/NewJob.vue")
+    },
+    {
+      path: "/candidates",
+      component: () => 
+        import("../components/Candidates.vue")
     }
+    ]
   }
 ];
 
