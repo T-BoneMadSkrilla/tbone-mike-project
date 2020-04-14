@@ -1,5 +1,8 @@
 <template>
     <div>
+        <div class="logo">
+            Our Logo
+        </div>
         <header class="header">
             <router-link to="/universities/data"> Metrics </router-link>
         </header>
@@ -13,6 +16,12 @@ export default {
 </script>
 
 <style scoped>
+    .logo{
+        font-size: 2.5em;
+        font-family: sans-serif;
+        color: #41B883;
+        -webkit-text-stroke: .5px #34495E;
+    }
     .header {
         background: #34495E;
         color: #41B883;
