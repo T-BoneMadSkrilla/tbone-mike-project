@@ -1,6 +1,6 @@
 <template>
     <div>
         Profile
-        <font-awesome-icon icon="coffee" />
+        <font-awesome-icon icon="fa-arrow-left" />
     </div>
 </template>
