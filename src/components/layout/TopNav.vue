@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="topRelative">
-            <router-link to="/employers/candidates" class="forEmployers"> Employers </router-link>
+            <router-link to="/employers" class="forEmployers"> Employers </router-link>
 
             <router-link to="/universities" class="forUni"> Universities </router-link>
             <router-link to="/profile" class="profile"> Profile </router-link>

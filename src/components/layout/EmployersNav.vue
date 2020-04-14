@@ -1,7 +1,7 @@
 <template>
     <header>
-        | <router-link to="/employers" class="forUni"> Candidates </router-link>
-        | <router-link to="/job-post" class="profile"> Post a job </router-link> |
+        | <router-link to="/employers"> Candidates </router-link>
+        | <router-link to="/employers/job-post"> Post a job </router-link> |
     </header>
 </template>
 
