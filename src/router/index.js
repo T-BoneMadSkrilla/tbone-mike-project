@@ -33,7 +33,7 @@ const routes = [
     name: "Universities",
     component: () => 
       import("../views/Universities.vue")
-  }
+  },
 ];
 
 const router = new VueRouter({

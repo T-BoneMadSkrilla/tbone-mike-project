@@ -1,7 +1,8 @@
 <template>
-    <div>
-        Employers Nav
-    </div>
+    <header>
+        | <router-link to="/employers" class="forUni"> Candidates </router-link>
+        | <router-link to="/job-post" class="profile"> Post a job </router-link> |
+    </header>
 </template>
 
 <script>
@@ -9,3 +10,22 @@ export default {
     name: "EmployersNav"
 }
 </script>
+
+<style scoped>
+
+    header {
+        background: #34495E;
+        color: #41B883;
+        font-size: 1em;
+        padding: 5px;
+    }
+    header a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .header a.router-link-exact-active{
+        color: #42b983;
+    }
+
+</style>

@@ -1,18 +1,16 @@
 <template>
     <div>
         <EmployersNav />
-        <Candidates />
+        New Job
     </div>
 </template>
 
 <script>
 import EmployersNav from "@/components/layout/EmployersNav";
-import Candidates from "@/components/Candidates";
 export default {
     name: "Employers",
     components: {
         EmployersNav,
-        Candidates
     }
 }
 </script>

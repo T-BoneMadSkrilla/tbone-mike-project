@@ -1,7 +1,7 @@
 <template>
     <div>
         <UniNav />
-        Universities Test
+        Universities
     </div>
 </template>
 
