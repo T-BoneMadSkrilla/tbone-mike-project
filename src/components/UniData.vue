@@ -1,30 +1,18 @@
 <template>
     <div>
-        <div class="logo">
-            Our Logo
-        </div>
         <header class="header">
-            | <router-link to="/employers/candidates"> Candidates </router-link>
-            | <router-link to="/employers/job-post"> Post a job </router-link> |
+            <router-link to="/universities/data"> Metrics </router-link>
         </header>
     </div>
 </template>
 
 <script>
 export default {
-    name: "EmployersNav"
+    name: "UniData"
 }
 </script>
 
 <style scoped>
-
-    .logo{
-        font-size: 2.5em;
-        font-family: sans-serif;
-        color: #41B883;
-        -webkit-text-stroke: .5px #34495E;
-    }
-
     .header {
         background: #34495E;
         color: #41B883;
@@ -32,6 +20,7 @@ export default {
         font-size: 1.25em;
         padding: 15px;
     }
+
     .header a {
         color: white;
         text-decoration: none;

@@ -1,7 +1,6 @@
 <template>
     <div>
         <EmployersNav />
-        Employers
         <router-view />
     </div>
 </template>

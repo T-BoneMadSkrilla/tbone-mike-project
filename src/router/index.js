@@ -25,8 +25,13 @@ const routes = [
   {
     path: "/universities",
     name: "Universities",
-    component: () => 
-      import("../views/Universities.vue")
+    component: () => import("../views/Universities.vue"),
+    children: [
+      {
+        path: "data",
+        component: () => import("../components/UniData.vue")
+      }
+    ]
   },
   {
     path: "/employers",
@@ -34,12 +39,12 @@ const routes = [
     component: () => import("../views/Employers.vue"),
     children: [
       {
-      path: "/job-post",
+      path: "job-post",
       component: () => 
         import("../components/NewJob.vue")
     },
     {
-      path: "/candidates",
+      path: "candidates",
       component: () => 
         import("../components/Candidates.vue")
     }

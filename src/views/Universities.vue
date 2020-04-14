@@ -1,7 +1,7 @@
 <template>
     <div>
         <UniNav />
-        Universities
+        <router-view />
     </div>
 </template>
 
