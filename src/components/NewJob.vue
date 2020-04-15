@@ -1,12 +1,11 @@
 <template>
-    <div>
-
-        New Job
-    </div>
+  <div>
+    New Job
+  </div>
 </template>
 
 <script>
 export default {
-    name: "NewJob",
-}
+  name: "NewJob"
+};
 </script>

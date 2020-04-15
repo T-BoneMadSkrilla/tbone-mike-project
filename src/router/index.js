@@ -7,20 +7,23 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
+    name: "Signin",
+    component: () => import("../views/SignIn.vue")
+  },
+  {
+    path: "/job-matches",
     name: "JobMatches",
     component: JobMatches
   },
   {
     path: "/resume",
     name: "Resume",
-    component: () =>
-      import("../views/Resume.vue")
+    component: () => import("../views/Resume.vue")
   },
   {
     path: "/profile",
     name: "Profile",
-    component: () => 
-      import("../views/Profile.vue")
+    component: () => import("../views/Profile.vue")
   },
   {
     path: "/universities",
@@ -39,15 +42,13 @@ const routes = [
     component: () => import("../views/Employers.vue"),
     children: [
       {
-      path: "job-post",
-      component: () => 
-        import("../components/NewJob.vue")
-    },
-    {
-      path: "candidates",
-      component: () => 
-        import("../components/Candidates.vue")
-    }
+        path: "job-post",
+        component: () => import("../components/NewJob.vue")
+      },
+      {
+        path: "candidates",
+        component: () => import("../components/Candidates.vue")
+      }
     ]
   }
 ];
