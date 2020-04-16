@@ -1,35 +1,36 @@
 <template>
   <div>
     <TopNav />
-    <Jobs msg="Jobs:" />
-
-    <div v-for="job in matchedJobs" :key="job.id">
-      <div class="jobCard">
-        <h4 class="companyPosition">
-          {{ job.company }} -
-          {{ job.position }}
-        </h4>
-        <div>
-          <button class="applyBtn">
-            Apply Here
-          </button>
-          <button class="xBtn">
-            Not Interested
-          </button>
-        </div>
-      </div>
-      <div class="descFlex">
-        <div class="icon" v-if="job.descShow == false" v-on:click="openOrCloseDesc(job)">
-          Description: <font-awesome-icon icon="angle-down" />
-        </div>
-
-        <div v-if="job.descShow">
-          <div class="icon" v-on:click="openOrCloseDesc(job)">
-            Close <font-awesome-icon icon="angle-up" />
+    <div class="wrapper">
+      <Jobs msg="Jobs:" />
+      <div v-for="job in matchedJobs" :key="job.id">
+        <div class="jobCard">
+          <h4 class="companyPosition">
+            {{ job.company }} -
+            {{ job.position }}
+          </h4>
+          <div>
+            <button class="applyBtn">
+              Apply Here
+            </button>
+            <button class="xBtn">
+              Not Interested
+            </button>
           </div>
-          <p>
-            {{job.description}}
-          </p>
+        </div>
+        <div class="descFlex">
+          <div class="icon" v-if="job.descShow == false" v-on:click="openOrCloseDesc(job)">
+            Description: <font-awesome-icon icon="angle-down" />
+          </div>
+
+          <div v-if="job.descShow">
+            <div class="icon" v-on:click="openOrCloseDesc(job)">
+              Close <font-awesome-icon icon="angle-up" />
+            </div>
+            <p>
+              {{job.description}}
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -79,6 +80,15 @@ export default {
 </script>
 
 <style scoped>
+  .wrapper {
+    margin: 0 auto;
+    margin-top: 10px;
+    position: relative;
+    text-align: center;
+    width: 1220px;
+    min-height: 720px;
+    border-style: double;
+  }
   .jobCard{
     margin: 0 auto;
     margin-top: 10px;

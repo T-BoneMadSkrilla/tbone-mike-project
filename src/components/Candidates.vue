@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wrapper">
     <h3>
       Candidates:
     </h3>
@@ -79,6 +79,15 @@ export default {
 </script>
 
 <style scoped>
+  .wrapper {
+    margin: 0 auto;
+    margin-top: 10px;
+    position: relative;
+    text-align: center;
+    width: 1220px;
+    min-height: 720px;
+    border-style: double;
+  }
 
   .candidateCard{
     margin: 0 auto;
