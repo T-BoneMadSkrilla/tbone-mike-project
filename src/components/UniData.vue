@@ -2,7 +2,7 @@
   <div class="wrapper">
     Uni Data
     <div class="chartFlex">
-      <div class="chartCard">Applications</div>
+      <div class="chartCard">Applications <Applications/></div>
       <div class="chartCard">Jobs per Major</div>
       <div class="chartCard">Another Chart</div>
       <div class="chartCard">Another Chart</div>
@@ -11,8 +11,12 @@
 </template>
 
 <script>
+import Applications from './charts/Applications';
 export default {
-  name: "UniData"
+  name: "UniData",
+  components: {
+    Applications
+  }
 };
 </script>
 
@@ -34,10 +38,11 @@ export default {
   }
 
   .chartCard{
-    height: 500px;
+    height: 450px;
     width: 450px;
     background: #e8e8e8;
     margin-bottom: 25px;
     margin-right: 10px;
+    text-align: center;
   }
 </style>
