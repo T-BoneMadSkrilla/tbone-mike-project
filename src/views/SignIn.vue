@@ -45,74 +45,75 @@ export default {
 </script>
 
 <style scoped>
-.logoWrapper {
-  margin: 0 auto;
-  position: absolute;
-  top: 170px;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  background: #e8e8e8;
-  width: 425px;
-  height: 130px;
-  text-align: center;
-  z-index: 2;
-}
+  .logoWrapper {
+    margin: 0 auto;
+    position: absolute;
+    top: 170px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    background: #e8e8e8;
+    width: 425px;
+    height: 130px;
+    text-align: center;
+    z-index: 2;
+  }
 
-.logo {
-  font-size: 3.5em;
-  font-family: sans-serif;
-  color: #41b883;
-  -webkit-text-stroke: 1px #34495e;
-}
+  .logo {
+    font-size: 3.5em;
+    font-family: sans-serif;
+    color: #41b883;
+    -webkit-text-stroke: 1px #34495e;
+  }
 
-.cardAroundSignIn {
-  margin: 0 auto;
-  background: #34495e;
-  height: 65px;
-  width: 425px;
-}
-input[type="text"] {
-  margin-top: 13px;
-  height: 31px;
-  font-size: 13px;
-}
-input[type="password"] {
-  margin-top: 13px;
-  height: 31px;
-  font-size: 13px;
-}
-.btn {
-  margin-top: 13px;
-  height: 36.75px;
-  background-color: #4caf50;
-  border: none;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  font-size: 13px;
-  cursor: pointer;
-}
+  .cardAroundSignIn {
+    margin: 0 auto;
+    background: #34495e;
+    height: 65px;
+    width: 425px;
+  }
+  input[type="text"] {
+    margin-top: 13px;
+    height: 31px;
+    font-size: 13px;
+  }
+  input[type="password"] {
+    margin-top: 13px;
+    height: 31px;
+    font-size: 13px;
+  }
+  .btn {
+    margin-top: 13px;
+    height: 36.75px;
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    cursor: pointer;
+  }
 
-.wrapper {
-  margin: 0 auto;
-  position: relative;
-  z-index: -1;
-  text-align: center;
-  width: 1220px;
-  height: 720px;
-  border-style: double;
-}
+  .wrapper {
+    margin: 0 auto;
+    position: relative;
+    z-index: -1;
+    text-align: center;
+    width: 1220px;
+    height: 720px;
+    border-style: double;
+    background: #fafafa;
+  }
 
-.topImgSize {
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  width: 1200px;
-  height: 700px;
-  object-fit: cover;
-  z-index: -1;
-  filter: grayscale(40%) sepia(0.15);
-}
+  .topImgSize {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 1200px;
+    height: 700px;
+    object-fit: cover;
+    z-index: -1;
+    filter: grayscale(40%) sepia(0.15);
+  }
 </style>

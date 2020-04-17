@@ -40,7 +40,7 @@
   margin-top: 30px;
   height: 400px;
   width: 750px;
-  background: lightgrey;
+  background: #e8e8e8;
   border-radius: 20px;
 }
 </style>
