@@ -33,6 +33,10 @@ const routes = [
       {
         path: "data",
         component: () => import("../components/UniData.vue")
+      },
+      {
+        path: "student-upload",
+        component: () => import("../components/StudentUpload.vue")
       }
     ]
   },

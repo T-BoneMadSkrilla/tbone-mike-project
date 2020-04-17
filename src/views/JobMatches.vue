@@ -88,15 +88,19 @@ export default {
     width: 1220px;
     min-height: 720px;
     border-style: double;
+    background: #fafafa;
   }
   .jobCard{
     margin: 0 auto;
-    margin-top: 10px;
+    margin-top: 15px;
     background: #e8e8e8;
     width: 700px;
     display: flex;
     justify-content: space-between;
 	  align-items: center;
+    /* border-style: solid;
+    border-width: .25px;
+    border-bottom-width: 0px; */
   }
   .companyPosition{
     margin-left: 30px;
@@ -132,6 +136,9 @@ export default {
     flex-direction: column;
     background: #e8e8e8;
     width: 700px;
+    /* border-style: solid;
+    border-width: .25px;
+    border-top-width: 0px; */
   }
 
   .icon{

@@ -30,5 +30,6 @@ export default {
     width: 1220px;
     min-height: 720px;
     border-style: double;
+    background: #fafafa;
   }
 </style>

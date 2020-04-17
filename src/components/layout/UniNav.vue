@@ -4,7 +4,8 @@
       Our Logo
     </div>
     <header class="header">
-      <router-link to="/universities/data"> Metrics </router-link>
+      | <router-link to="/universities/data"> Metrics </router-link> |
+      <router-link to="/universities/student-upload"> Student Upload </router-link> |
     </header>
   </div>
 </template>
@@ -24,6 +25,7 @@ export default {
 }
 .header {
   background: #34495e;
+  /* background-image: linear-gradient(to right,#e8e8e8, #2c3e50, #e8e8e8); */
   color: #41b883;
   text-align: center;
   font-size: 1.25em;
