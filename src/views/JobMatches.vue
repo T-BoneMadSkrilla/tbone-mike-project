@@ -50,23 +50,12 @@ export default {
   },
   data() {
     return {
-      matchedJobs: [
-        {id: 1,
-         company: "Michael-soft",
-         position: "Code Monkey",
-         descShow: false,
-         description: "oh hey I'm Mike, you should work at my company",
-         applied: 0},
-        {id: 2,
-         company: "Some Tech Company",
-         position: "Full Stack Engineer",
-         descShow: false,
-         description: "oh hey I'm Mike, you should work at my company. vpauosifgvbasod paosdiuhva saposdiughvba posdinpausdhv l;lkkdjf poauisdhvopasdg",
-         applied: 0}
-      ]
+      userId: this.$route.params.id,
+      matchedJobs: []
     };
   },
   mounted() {
+    console.log(this.userId)
     axios.get("http://localhost:3030/api/matched-jobs").then(res => {
       this.matchedJobs = res.data;
     });

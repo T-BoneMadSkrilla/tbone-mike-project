@@ -11,7 +11,7 @@ const routes = [
     component: () => import("../views/SignIn.vue")
   },
   {
-    path: "/job-matches",
+    path: "/:id/job-matches",
     name: "JobMatches",
     component: JobMatches
   },

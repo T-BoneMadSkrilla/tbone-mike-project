@@ -6,6 +6,7 @@ const cors = require('cors');
 const session = require('express-session');
 const {json} = require('body-parser');
 const massive = require('massive');
+const ac = require('./controllers/authController');
 const sc = require('./controllers/studentController');
 const jc = require('./controllers/jobController');
 
@@ -35,6 +36,8 @@ app.use(
     secret: SESSION_SECRET,
   })
 );
+
+app.post('/api/login', ac.login);
 
 app.get('/api/matched-jobs', jc.getJobs);
 

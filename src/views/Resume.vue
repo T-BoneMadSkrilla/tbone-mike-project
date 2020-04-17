@@ -2,10 +2,18 @@
   <div class="flexAround">
     <TopNav />
     <div class="wrapper">
-      <h3>Please upload your resume</h3>
-      <p>
-        Ight buddy, I was thinking of using firebase to host resumes. Thoughts?
-      </p>
+      <div class="relative">
+        <!-- <router-link to="/job-matches" class="homeArrow">
+          <font-awesome-icon icon="arrow-left" size="3x" />
+        </router-link> -->
+
+        <div class="userImg">
+          Profile
+        </div>
+        <div class="about">
+          user resume
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -35,4 +43,35 @@ export default {
     border-style: double;
     background: #fafafa;
   }
+
+  .relative {
+  position: relative;
+}
+
+.homeArrow {
+  position: absolute;
+  left: 100px;
+  top: 30px;
+  color: grey;
+  height: 50px;
+  width: 50px;
+}
+
+.userImg {
+  margin: 0 auto;
+  margin-top: 5px;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  border-style: solid;
+}
+
+.about {
+  margin: 0 auto;
+  margin-top: 30px;
+  height: 400px;
+  width: 750px;
+  background: #e8e8e8;
+  border-radius: 20px;
+}
 </style>
