@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="flexAround">
     <TopNav />
     <div class="wrapper">
       <h3>Please upload your resume</h3>
@@ -22,12 +22,15 @@ export default {
 </script>
 
 <style scoped>
+  .flexAround{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
   .wrapper {
-    margin: 0 auto;
-    margin-top: 10px;
-    position: relative;
+    margin-left: 15%;
     text-align: center;
-    width: 1220px;
+    width: 85%;
     min-height: 720px;
     border-style: double;
     background: #fafafa;

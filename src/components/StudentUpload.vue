@@ -21,12 +21,10 @@ export default {
 
 <style scoped>
   .wrapper {
-    margin: 0 auto;
-    margin-top: 10px;
-    position: relative;
+    margin-left: 15%;
     text-align: center;
-    width: 1220px;
-    min-height: 520px;
+    width: 85%;
+    min-height: 720px;
     border-style: double;
     background: #fafafa;
   }

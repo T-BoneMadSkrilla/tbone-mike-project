@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div class="logo">
-      Our Logo
-    </div>
     <header class="header">
-      | <router-link to="/employers/candidates"> Candidates </router-link> |
-      <router-link to="/employers/job-post"> Post a job </router-link> |
+      <div class="logoWrapper">
+        <img class="logo" src="../../assets/logo.png"/>
+      </div>
+      <router-link to="/employers/candidates"> Candidates </router-link> 
+      <router-link to="/employers/job-post"> Post a job </router-link>
     </header>
   </div>
 </template>
@@ -17,21 +17,36 @@ export default {
 </script>
 
 <style scoped>
+.logoWrapper {
+  width: 100%;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  border-bottom-color: #fafafa;
+}
+
 .logo {
-  font-size: 2.5em;
-  font-family: sans-serif;
-  color: #41b883;
+  width: 100%;
+  height: 135px;
   -webkit-text-stroke: 0.5px #34495e;
+  object-fit: contain;
 }
 
 .header {
-  background: #34495e;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(to bottom, #34495e, #0892D0);
   color: #41b883;
   text-align: center;
   font-size: 1.25em;
-  padding: 15px;
+  width: 15%;
+  height: 105%;
+  max-height: 200%;
+  display: flex;
+  flex-direction: column;
 }
 .header a {
+  margin-top: 30px;
   color: white;
   text-decoration: none;
 }

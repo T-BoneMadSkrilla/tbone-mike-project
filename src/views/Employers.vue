@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="flexAround">
     <EmployersNav />
     <router-view />
   </div>
@@ -14,3 +14,11 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+  .flexAround{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+</style>
