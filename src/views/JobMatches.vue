@@ -6,8 +6,8 @@
       <div v-for="job in matchedJobs" :key="job.id">
         <div class="jobCard">
           <h4 class="companyPosition">
-            {{ job.company }} -
-            {{ job.position }}
+            {{ job.company_id }} -
+            {{ job.job_title }}
           </h4>
           <div>
             <button class="applyBtn">
@@ -50,12 +50,10 @@ export default {
   },
   data() {
     return {
-      userId: this.$route.params.id,
       matchedJobs: []
-    };
+    }
   },
   mounted() {
-    console.log(this.userId)
     axios.get("http://localhost:3030/api/matched-jobs").then(res => {
       this.matchedJobs = res.data;
     });

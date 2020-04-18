@@ -5,7 +5,7 @@ module.exports={
         const db = req.app.get("db");
         const email = `'` + req.body.Email + `'`;
         await db.query(`SELECT * FROM users WHERE email = ${email}`).then( async users => {
-        console.log(users);
+        console.log(users, req.session);
         if (!users.length) {
             res.status(401).json({ error: "No user found" });
             

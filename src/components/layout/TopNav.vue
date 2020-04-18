@@ -14,7 +14,7 @@
       <div class="logoWrapper">
         <img class="logo" src="../../assets/logo.png"/>
       </div>
-      <router-link to="/job-matches"> Job Matches </router-link> 
+      <router-link to="/job-matches/1"> Job Matches </router-link> 
       <router-link to="/resume"> Resume </router-link> 
     </header>
   </div>
@@ -22,7 +22,17 @@
 
 <script>
 export default {
-  name: "TopNav"
+  name: "TopNav",
+  data() {
+    return {
+      userId: String,
+      jobMatch: "/job-matches/"
+    }
+  },
+  mounted() {
+    this.userId = this.$route.params.id
+    console.log("'" + this.jobMatch + this.userId + "'")
+  }
 };
 </script>
 

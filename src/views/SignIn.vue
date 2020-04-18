@@ -39,7 +39,7 @@ export default {
         .post("http://localhost:3030/api/login", { Email, Password })
         .then( res => {
           if (res.data.user_type == 1) {
-          this.$router.push(`${res.data.id}/job-matches`)
+          this.$router.push(`job-matches/${res.data.id}`)
           }
           else if (res.data.user_type == 2) {
             this.$router.push("employers/candidates")
