@@ -1,21 +1,12 @@
 <template>
   <div>
-    <!-- <div class="topRelative"> -->
-      <!-- <router-link to="/employers/candidates" class="forEmployers">
-        Employers
-      </router-link>
-
-      <router-link to="/universities/data" class="forUni">
-        Universities
-      </router-link>
-      <router-link to="/profile" class="profile"> Profile </router-link> -->
-    <!-- </div> -->
     <header class="header nav">
       <div class="logoWrapper">
         <img class="logo" src="../../assets/logo.png"/>
       </div>
-      <router-link to="/job-matches/1"> Job Matches </router-link> 
-      <router-link to="/resume"> Resume </router-link> 
+      <router-link :to="{name: 'JobMatches', params: {id: userId}}"> Job Matches </router-link> 
+
+      <router-link :to="{name: 'Resume', params: {id: userId}}"> Resume </router-link> 
     </header>
   </div>
 </template>
@@ -23,15 +14,17 @@
 <script>
 export default {
   name: "TopNav",
+  // props: {
+  //   userId: String
+  // },
   data() {
     return {
-      userId: String,
+      userId: this.$route.params.id,
       jobMatch: "/job-matches/"
     }
   },
   mounted() {
-    this.userId = this.$route.params.id
-    console.log("'" + this.jobMatch + this.userId + "'")
+    console.log(this.userId);
   }
 };
 </script>

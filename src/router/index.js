@@ -13,11 +13,10 @@ const routes = [
   {
     path: "/job-matches/:id",
     name: "JobMatches",
-    component: JobMatches,
-    props: true
+    component: JobMatches
   },
   {
-    path: "/resume",
+    path: "/resume/:id",
     name: "Resume",
     component: () => import("../views/Resume.vue")
   },

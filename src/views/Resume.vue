@@ -1,6 +1,6 @@
 <template>
   <div class="flexAround">
-    <TopNav />
+    <TopNav userId="userId"/>
     <div class="wrapper">
       <div class="relative">
         <!-- <router-link to="/job-matches" class="homeArrow">
@@ -25,6 +25,11 @@ export default {
   name: "Resume",
   components: {
     TopNav
+  },
+  data () {
+    return {
+      userId: this.$route.params.id,
+    }
   }
 };
 </script>
