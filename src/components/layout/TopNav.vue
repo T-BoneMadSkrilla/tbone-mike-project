@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header class="header nav">
+    <header class="header">
       <div class="logoWrapper">
         <img class="logo" src="../../assets/logo.png"/>
       </div>
@@ -73,7 +73,7 @@ export default {
   object-fit: contain;
 }
 .header {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   background-image: linear-gradient(to bottom, #34495e, #0892D0);
@@ -81,8 +81,7 @@ export default {
   text-align: center;
   font-size: 1.25em;
   width: 15%;
-  min-height: 105%;
-  max-height: 200%;
+  height: 100%;
   overflow: auto;
   display: flex;
   flex-direction: column;

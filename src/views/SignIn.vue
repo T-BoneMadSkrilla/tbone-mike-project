@@ -36,7 +36,7 @@ export default {
       const Password = this.password;
 
       axios
-        .post("http://localhost:3030/api/login", { Email, Password })
+        .post("http://localhost:3030/api/login", { Email, Password }, {withCredentials: true})
         .then( res => {
           if (res.data.user_type == 1) {
           this.$router.push(`job-matches/${res.data.id}`)

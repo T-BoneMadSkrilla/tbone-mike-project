@@ -1,16 +1,16 @@
 <template>
-  <div class="flexAround">
+  <div>
     <TopNav />
     <div class="wrapper">
       <Jobs msg="Jobs:" />
-      <div v-for="job in matchedJobs" :key="job.id">
+      <div v-for="job in matchedJobs" :key="job.job_id">
         <div class="jobCard">
           <h4 class="companyPosition">
             {{ job.company_id }} -
             {{ job.job_title }}
           </h4>
           <div>
-            <button class="applyBtn">
+            <button class="applyBtn" v-on:click="apply(job)">
               Apply Here
             </button>
             <button class="xBtn">
@@ -50,28 +50,37 @@ export default {
   },
   data() {
     return {
+      userId: this.$route.params.id,
       matchedJobs: []
     }
   },
   mounted() {
-    axios.get("http://localhost:3030/api/matched-jobs").then(res => {
+    const UserId = this.userId
+    axios.get("http://localhost:3030/api/matched-jobs/"+ UserId, {withCredentials: true}).then(res => {
       this.matchedJobs = res.data;
     });
   },
   methods: {
     openOrCloseDesc(job) {
       job.descShow = !job.descShow;
+    },
+    apply(job){
+      const JobId = job.job_id
+      const UserId = this.userId
+      axios.post("http://localhost:3030/api/apply-job", {JobId, UserId})
+        .then(
+          this.matchedJobs = this.matchedJobs.filter(job => job.job_id !== JobId),
+        )
+        .catch(
+        err => console.log(err)
+      )
     }
   }
 };
 </script>
 
 <style scoped>
-  .flexAround{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
+
   .wrapper {
     margin-left: 15%;
     text-align: center;
@@ -88,9 +97,9 @@ export default {
     display: flex;
     justify-content: space-between;
 	  align-items: center;
-    /* border-style: solid;
+    border-style: solid;
     border-width: .25px;
-    border-bottom-width: 0px; */
+    border-bottom-width: 0px;
   }
   .companyPosition{
     margin-left: 30px;
@@ -126,9 +135,9 @@ export default {
     flex-direction: column;
     background: #e8e8e8;
     width: 700px;
-    /* border-style: solid;
+    border-style: solid;
     border-width: .25px;
-    border-top-width: 0px; */
+    border-top-width: 0px;
   }
 
   .icon{

@@ -40,11 +40,11 @@ CREATE TABLE jobs(
 );
 
 CREATE TABLE applied_jobs(
+	applied_jobs_id serial PRIMARY KEY,
 	job_id INTEGER NOT NULL,
 	student_id INTEGER NOT NULL,
 	applied_on TIMESTAMP DEFAULT NOW(),
 	company_replied BOOL DEFAULT 'f',
-	PRIMARY KEY (job_id, student_id),
 	CONSTRAINT applied_job_id_fkey FOREIGN KEY (job_id)
 		REFERENCES jobs (job_id)
 		ON UPDATE NO ACTION ON DELETE NO ACTION,

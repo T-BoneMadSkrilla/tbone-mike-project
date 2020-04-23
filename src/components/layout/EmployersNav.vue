@@ -32,7 +32,7 @@ export default {
 }
 
 .header {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   background-image: linear-gradient(to bottom, #34495e, #0892D0);
@@ -40,8 +40,7 @@ export default {
   text-align: center;
   font-size: 1.25em;
   width: 15%;
-  height: 105%;
-  max-height: 200%;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="flexAround">
+  <div>
     <TopNav userId="userId"/>
     <div class="wrapper">
       <div class="relative">

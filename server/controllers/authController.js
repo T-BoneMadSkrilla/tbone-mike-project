@@ -3,9 +3,10 @@ const bcrypt = require("bcryptjs");
 module.exports={
     login : async (req, res) => {
         const db = req.app.get("db");
+        console.log(req.body)
         const email = `'` + req.body.Email + `'`;
+        console.log(email)
         await db.query(`SELECT * FROM users WHERE email = ${email}`).then( async users => {
-        console.log(users, req.session);
         if (!users.length) {
             res.status(401).json({ error: "No user found" });
             
@@ -14,9 +15,10 @@ module.exports={
             req.body.Password,
             users[0].password
             );
-            console.log(isMatch)
             if (isMatch) {
-            req.session.user = { email: users[0].id };
+            req.session.user = users[0].id;
+            console.log("log in session..." + req.session.id + ".....")
+            console.log(req.session)
             res.json({ id: users[0].id, email: users[0].email, user_type: users[0].user_type });
             } else {
             res.status(401).json({ error: "Incorrect password" });

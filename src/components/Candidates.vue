@@ -66,7 +66,8 @@ export default {
           email: "tyler@edu.com",
           resumeShow: false,
           resume: "this is where the resume would pull up"
-        }
+        },
+        
       ]
     }
   },
