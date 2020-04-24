@@ -2,9 +2,9 @@
   <div>
     <header class="header">
       <div class="logoWrapper">
-        <img class="logo" src="../../assets/logo.png"/>
+        <img class="logo" src="../../assets/logo.png" />
       </div>
-      <router-link to="/employers/candidates"> Candidates </router-link> 
+      <router-link :to="{name: 'Candidates', params: { id: userId}}"> Candidates </router-link>
       <router-link to="/employers/job-post"> Post a job </router-link>
     </header>
   </div>
@@ -12,7 +12,12 @@
 
 <script>
 export default {
-  name: "EmployersNav"
+  name: "EmployersNav",
+  data() {
+    return {
+      userId: this.$route.params.id,
+    }
+  }
 };
 </script>
 
@@ -35,7 +40,7 @@ export default {
   position: fixed;
   left: 0;
   top: 0;
-  background-image: linear-gradient(to bottom, #34495e, #0892D0);
+  background-image: linear-gradient(to bottom, #34495e, #0892d0);
   color: #41b883;
   text-align: center;
   font-size: 1.25em;

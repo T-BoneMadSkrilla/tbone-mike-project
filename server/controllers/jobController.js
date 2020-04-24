@@ -6,9 +6,8 @@ module.exports={
     getJobs: async (req, res) => {
         try {
             const db = req.app.get('db');
-            console.log(req.session.user);
-            console.log(req.params.id)
-            if(req.session.user == req.params.id){
+
+            if(req.session.user == req.params.id && req.session.userType == 1){
                 const jobs = await db.query(`SELECT * FROM jobs WHERE job_id NOT IN (SELECT job_id FROM applied_jobs WHERE student_id = ${req.params.id})`)
                 return res.status(200).send(jobs);
             } else {

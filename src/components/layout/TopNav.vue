@@ -2,11 +2,15 @@
   <div>
     <header class="header">
       <div class="logoWrapper">
-        <img class="logo" src="../../assets/logo.png"/>
+        <img class="logo" src="../../assets/logo.png" />
       </div>
-      <router-link :to="{name: 'JobMatches', params: {id: userId}}"> Job Matches </router-link> 
+      <router-link :to="{ name: 'JobMatches', params: { id: userId } }">
+        Job Matches
+      </router-link>
 
-      <router-link :to="{name: 'Resume', params: {id: userId}}"> Resume </router-link> 
+      <router-link :to="{ name: 'Resume', params: { id: userId } }">
+        Resume
+      </router-link>
     </header>
   </div>
 </template>
@@ -21,7 +25,7 @@ export default {
     return {
       userId: this.$route.params.id,
       jobMatch: "/job-matches/"
-    }
+    };
   },
   mounted() {
     console.log(this.userId);
@@ -76,7 +80,7 @@ export default {
   position: fixed;
   left: 0;
   top: 0;
-  background-image: linear-gradient(to bottom, #34495e, #0892D0);
+  background-image: linear-gradient(to bottom, #34495e, #0892d0);
   color: #41b883;
   text-align: center;
   font-size: 1.25em;

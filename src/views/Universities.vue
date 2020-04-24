@@ -17,9 +17,9 @@ export default {
 </script>
 
 <style scoped>
-  .flexAround{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
+.flexAround {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 </style>

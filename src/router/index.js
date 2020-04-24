@@ -50,7 +50,8 @@ const routes = [
         component: () => import("../components/NewJob.vue")
       },
       {
-        path: "candidates",
+        path: "candidates/:id",
+        name: 'Candidates',
         component: () => import("../components/Candidates.vue")
       }
     ]

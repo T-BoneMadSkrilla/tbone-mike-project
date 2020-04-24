@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TopNav userId="userId"/>
+    <TopNav userId="userId" />
     <div class="wrapper">
       <div class="relative">
         <!-- <router-link to="/job-matches" class="homeArrow">
@@ -26,30 +26,30 @@ export default {
   components: {
     TopNav
   },
-  data () {
+  data() {
     return {
-      userId: this.$route.params.id,
-    }
+      userId: this.$route.params.id
+    };
   }
 };
 </script>
 
 <style scoped>
-  .flexAround{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .wrapper {
-    margin-left: 15%;
-    text-align: center;
-    width: 85%;
-    min-height: 720px;
-    border-style: double;
-    background: #fafafa;
-  }
+.flexAround {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.wrapper {
+  margin-left: 15%;
+  text-align: center;
+  width: 85%;
+  min-height: 720px;
+  border-style: double;
+  background: #fafafa;
+}
 
-  .relative {
+.relative {
   position: relative;
 }
 
